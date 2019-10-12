@@ -1,0 +1,109 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+/* Global */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #282828;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 5px 0 5px 0;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 16px;
+    margin: 5px 0 5px 0;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+    margin: 5px 0 5px 0;
+    font-size: 16px;
+    font-weight: 400;
+    width: 200px;
+    border-radius: 60px;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    background-color: #ff61bb;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+input {
+    font-family: 'Roboto', sans-serif;
+    margin: 5px 0 5px 0;
+    font-size: 16px;
+    width: 200px;
+    border-radius: 60px;
+    border: none;
+    padding: 5px 10px 5px 10px;
+    outline: none;
+}
+
+select {
+    font-family: 'Roboto', sans-serif;
+    margin: 5px 0 5px 0;
+    font-size: 14px;
+    width: 200px;
+    border-radius: 5px;
+    border: 2px solid #fab1da;
+    padding: 3px;
+    outline: none;
+}
+
+
+/* Core */
+
+.app-wrapper {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 80%;
+    min-width: 400px;
+}
+
+/* App Content */
+
+/* Survey */
+
+.survey-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #fdbee2;
+    border: 3px solid #fab1da;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.survey-profile-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.survey-questions-container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    width: 100%;
+}
+
+.survey-questions-cell {
+    flex-grow: 1;
+    background-color: #fff7f7;
+    max-width: 100%;
+    min-width: 20%;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px 5px 10px 5px;
+}

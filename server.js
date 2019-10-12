@@ -9,6 +9,7 @@ let portList = { friendFinder: 8080 }
 //  Server: Config data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static('./app/public'))
 
 // Server: Setup routing requests
 require("./app/routes/apiroutes.js")(app);

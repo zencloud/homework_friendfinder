@@ -3,12 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Friend Finder!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Candy Survey</title>
 
-    <!-- JQuery and Bootstrap -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
@@ -17,222 +19,166 @@
 
 <body>
 
-    <div class="container">
-
-        <h2>Survey Questions</h2>
-        <hr>
-
-        <h3><strong>Who are you?</strong></h3>
-        <h4>Name (Required)</h4>
-        <input type="text" id="name" class="form-control" required>
-
-        <h4>Link to Photo Image (Required)</h4>
-        <input type="text" id="photo" class="form-control" required>
-
-        <hr>
-
-        <h3><strong>Question 1</strong></h3>
-        <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-        <select class="chosen-select" id="q1">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-
-        <h3><strong>Question 2</strong></h3>
-        <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
-        <select class="chosen-select" id="q2">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-
-
-        <h3><strong>Question 3</strong></h3>
-        <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
-        <select class="chosen-select" id="q3">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-
-
-        <h3><strong>Question 4</strong></h3>
-        <h4>You rarely do something just out of sheer curiosity.</h4>
-        <select class="chosen-select" id="q4">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-
-
-        <h3><strong>Question 5</strong></h3>
-        <h4>People can rarely upset you.</h4>
-        <select class="chosen-select" id="q5">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-
-
-        <h3><strong>Question 6</strong></h3>
-        <h4>It is often difficult for you to relate to other people’s feelings.</h4>
-        <select class="chosen-select" id="q6">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-
-
-        <h3><strong>Question 7</strong></h3>
-        <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
-        <select class="chosen-select" id="q7">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-
-        <h3><strong>Question 8</strong></h3>
-        <h4>You rarely get carried away by fantasies and ideas.</h4>
-        <select class="chosen-select" id="q8">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-
-        <h3><strong>Question 9</strong></h3>
-        <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or
-            not.</h4>
-        <select class="chosen-select" id="q9">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-
-        <h3><strong>Question 10</strong></h3>
-        <h4>You feel more energetic after spending time with a group of people.</h4>
-        <select class="chosen-select" id="q10">
-            <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
-        </select>
-
-        <br>
-        <br>
-
-        <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
-                aria-hidden="true"></i>
-            Submit</button>
-
-        <hr>
-        <footer class="footer">
-            <div class="container">
-                <p><a href="/api/friends">API Friends List</a> | <a
-                        href="https://github.com/afhaque/friendfinder">GitHub Repo</a></p>
+    <div class="app-wrapper">
+        <div class="survey-container">
+            <p>CANDY SURVEY</p>
+            <div class="survey-profile-container">
+                <input type="text" placeholder="Name" id="name" class="inputCheck" required>
+                <input type="text" placeholder="Profile url:" id="photo" class="inputCheck" required>
             </div>
-        </footer>
 
-    </div>
+            <div class="survey-questions-container">
 
-    <!-- Modal -->
-    <div id="modal">
-        Test
-    </div>
+                <div class="survey-questions-cell">
+                    <h2>Question 1</h2>
+                    <h3>You like candy</h3>
+                    <select class="chosen-select inputCheck" id="q1">
+                        <option value="">Choose one...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
 
-    </div>
+                <div class="survey-questions-cell">
+                    <h2>Question 2</h2>
+                    <h3>You like ice-cream</h3>
+                    <select class="chosen-select inputCheck" id="q2">
+                        <option value="">Choose one...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
 
+
+                <div class="survey-questions-cell">
+                    <h2>Question 3</h2>
+                    <h3>You like cotton candy</h3>
+                    <select class="chosen-select inputCheck" id="q3">
+                        <option value="">Choose one...</option>
+
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="survey-questions-cell">
+                    <h2>Question 4</h2>
+                    <h3>You like halloween</h3>
+                    <select class="chosen-select inputCheck" id="q4">
+                        <option value="">Choose one...</option>
+
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="survey-questions-cell">
+                    <h2>Question 5</h2>
+                    <h3>You like chocolate</h3>
+                    <select class="chosen-select inputCheck" id="q5">
+                        <option value="">Choose one...</option>
+
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="survey-questions-cell">
+                    <h2>Question 6</h2>
+                    <h3>You like cake</h3>
+                    <select class="chosen-select inputCheck" id="q6">
+                        <option value="">Choose one...</option>
+
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="survey-questions-cell">
+                    <h2>Question 7</h2>
+                    <h3>You like pie</h3>
+                    <select class="chosen-select inputCheck" id="q7">
+                        <option value="">Choose one...</option>
+
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="survey-questions-cell">
+                    <h2>Question 8</h2>
+                    <h3>You like cheesecake</h3>
+                    <select class="chosen-select inputCheck" id="q8">
+                        <option value="">Choose one...</option>
+
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <div class="survey-questions-cell">
+                    <h2>Question 9</h2>
+                    <h3>You like cupcakes</h3>
+                    <select class="chosen-select inputCheck" id="q9">
+                        <option value="">Choose one...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                <div class="survey-questions-cell">
+                    <h2>Question 10</h2>
+                    <h3>You like donuts</h3>
+                    <select class="chosen-select inputCheck" id="q10">
+                        <option value="">Choose one...</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <!-- End Survey Questions Container -->
+            </div>
+
+            <p><button id="#btn-submit-questions" onclick="return app_submit_questions(event)">Submit Answers</button></p>
+            <!-- End Survey Container  -->
+        </div>
+
+        <!-- Modal -->
+        <div id="m-friend" class="modal">
+            <div id="m-friend-name"></div>
+            <div><img id="m-friend-photo" src=""></div>
+        </div>
+
+        <script src="./assets/app.js"></script>
 </body>
 
 </html>
-
-<script type="text/javascript">
-
-    // Capture the form inputs
-    $("#submit").on("click", function (event) {
-        event.preventDefault();
-
-        // Form validation
-        function validateForm() {
-            var isValid = true;
-            $(".form-control").each(function () {
-                if ($(this).val() === "") {
-                    isValid = false;
-                }
-            });
-
-            $(".chosen-select").each(function () {
-
-                if ($(this).val() === "") {
-                    isValid = false;
-                }
-            });
-            return isValid;
-        }
-
-        // If all required fields are filled
-        if (!validateForm()) {
-            console.log("Success");
-            // Create an object for the user"s data
-            var userData = {
-                name: $("#name").val(),
-                photo: $("#photo").val(),
-                scores: [
-                    $("#q1").val(),
-                    $("#q2").val(),
-                    $("#q3").val(),
-                    $("#q4").val(),
-                    $("#q5").val(),
-                    $("#q6").val(),
-                    $("#q7").val(),
-                    $("#q8").val(),
-                    $("#q9").val(),
-                    $("#q10").val()
-                ]
-            };
-
-            // AJAX post the data to the friends API.
-            $.post("/api/friends", userData, function (data) {
-
-                // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-                //$("#match-name").text(data.name);
-                //$("#match-img").attr("src", data.photo);
-
-                $("#modal").modal();
-
-            });
-        } else {
-            alert("Please fill out all fields before submitting!");
-        }
-    });
-</script>
